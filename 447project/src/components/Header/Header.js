@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='header'>
-        <Link to="/">
+        <Link to="/" className="header-member">
             <button variant="outlined">Home</button>
         </Link>
-        <Link to="/search">
+        <Link to="/search" className="header-member">
             <button variant="outlined">Search</button>
         </Link>
-        <Link to="/entry">
+        <Link to="/entry" className="header-member">
             <button variant="outlined">Entry</button>
         </Link>
-        <Link to="/edit">
+        <Link to="/edit" className="header-member">
             <button variant="outlined">Edit</button>
         </Link>
     </div>
