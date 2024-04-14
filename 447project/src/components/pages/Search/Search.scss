@@ -1,10 +1,38 @@
-.page {
+.search-page {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    justify-content: flex-start;
+    font-size: calc(10px + 1vmin);
     color: white;
+}
+
+.search-title {
+    font-size: calc(10px + 2vmin);
+}
+
+.search-col-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-desc {
+    display: flex;
+}
+
+.search-button-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30vw;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.search-button-member {
+    display: flex;
 }
