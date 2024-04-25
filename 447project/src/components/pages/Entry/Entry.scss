@@ -1,10 +1,149 @@
 .page {
-    background-color: #282c34;
+    background-color: #cecece;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex;
+    justify-content: flex-start;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #31323d;
+}
+
+.twoColumnBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.singleColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.singleRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.singleRowButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+input {
+    margin-bottom: 8px;
+    align-self: flex-end;
+}
+
+.buttonS {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #31323d;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+  
+.buttonS:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+  
+.buttonS:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+  
+.buttonS:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+  
+body,html {
+    height:100%;
+    font-family:sans-serif
+}
+  
+a {
+    margin:0;
+    transition:all .4s;
+    -webkit-transition:all .4s;
+    -o-transition:all .4s;
+    -moz-transition:all .4s
+}
+  
+a:focus {
+    outline:none!important;
+}
+  
+a:hover {
+    text-decoration:none;
+}
+  
+ul,
+li {
+    margin: 0;
+    list-style-type: none
+}
+  
+input {
+    display: block;
+    outline: none;
+    border: none !important
+}
+  
+textarea {
+    display: block;
+    outline: none
+}
+  
+textarea:focus,
+input:focus {
+    border-color: transparent !important
+}
+  
+.buttonS {
+    outline: none !important;
+    border: none;
+    background: 0 0
+}
+  
+.buttonS:hover {
+    cursor: pointer
+}
+  
+iframe {
+    border: none !important
 }

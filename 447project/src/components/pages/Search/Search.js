@@ -1,7 +1,7 @@
 import React, { useState }    from 'react';
 import $                      from "jquery";
-import moment                 from 'moment';
-import styles from './search.module.css';
+// import moment                 from 'moment';
+import styles                 from './search.module.css';
 
 
 function useForceUpdate(){
@@ -13,6 +13,7 @@ function useForceUpdate(){
 }
 
 const Search = () => {
+  // eslint-disable-next-line
   const [responseData, setResponseData] = useState(null);
   const forceUpdate = useForceUpdate();
 
@@ -20,8 +21,8 @@ const Search = () => {
     const url = "https://people.eecs.ku.edu/~j618p208/App.php";
     const whichQuery = querytype;
     const Name = "";
-    const Date = moment().format('YYYY-MM-DD');
-    // const Date = "2024-03-15";
+    // const Date = moment().format('YYYY-MM-DD');
+    const Date = "2024-03-15";
     const Location = "";
     const Region = "";
     const numPlayers = "";
@@ -44,31 +45,31 @@ const Search = () => {
         Winner:Winner, Ranked:Ranked
       },
       success: function(data) {
+        $("div.responseBox").html(data);
         setResponseData(data);
-        $("div.responseBox").html(responseData);
-        forceUpdate();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Error:", jqXHR, textStatus, errorThrown);
         // Handle errors appropriately
       }
     });
+    setTimeout(() => {
+      forceUpdate();
+    }, 200);
   };
 
 
   return (
     <div className={styles.searchPage}>
         <div className={styles.searchTitle}>
-          <p>Search</p>
+          <h2>Search</h2>
+          <h3>Select search parameters:</h3>
         </div>
         <div className={styles.searchColBox}>
-          <div className={styles.searchDesc}>
-            <p>Select search parameters:</p>
-          </div>
           <div className={styles.searchButtonBox}>
+            <button className={styles.searchButtonMember} onClick={() => handleClick('all')}>All</button>
             <button className={styles.searchButtonMember} onClick={() => handleClick('after')}>Upcoming</button>
             <button className={styles.searchButtonMember} onClick={() => handleClick('before')}>Past</button>
-            <button className={styles.searchButtonMember} onClick={() => handleClick('all')}>All</button>
             <button className={styles.searchButtonMember} onClick={() => handleClick('region')}>Specific Region</button>
           </div>
           <div className={styles.responseBox}>
