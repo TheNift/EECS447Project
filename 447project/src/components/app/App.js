@@ -1,11 +1,10 @@
-// import logo from '../../assets/logo.svg';
-import './App.css';
+import styles from './app.module.css';
 import Header from '../Header/Header';
 import PageRouter from '../PageRouter/PageRouter';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header />
       <PageRouter />
     </div>
