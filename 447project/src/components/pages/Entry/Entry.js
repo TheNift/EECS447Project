@@ -1,9 +1,9 @@
 import React from 'react';
-import './Entry.css';
+import styles from './entry.module.css';
 
 const Entry = () => {
   return (
-    <div className="page">
+    <div className={styles.page}>
         <p>Entry</p>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Edit.css';
+import styles from './edit.module.css';
 
 const Edit = () => {
   return (
-    <div className="page">
+    <div className={styles.page}>
         <p>Edit</p>
     </div>
   );

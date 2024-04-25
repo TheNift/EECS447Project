@@ -1,21 +1,23 @@
 import React from 'react';
-import './Header.css';
+import styles from './header.module.css';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/SmashBall.svg';
 
 const Header = () => {
   return (
-    <div className='header'>
-        <Link to="/" className="header-member">
-            <button variant="outlined">Home</button>
+    <div className={styles.header}>
+        <img src={logo} alt="Smash Logo" className={styles.appLogo}/>
+        <Link to="/" className={styles.headerMember}>
+            <button>Home</button>
         </Link>
-        <Link to="/search" className="header-member">
-            <button variant="outlined">Search</button>
+        <Link to="/search" className={styles.headerMember}>
+            <button>Search</button>
         </Link>
-        <Link to="/entry" className="header-member">
-            <button variant="outlined">Entry</button>
+        <Link to="/entry" className={styles.headerMember}>
+            <button>Entry</button>
         </Link>
-        <Link to="/edit" className="header-member">
-            <button variant="outlined">Edit</button>
+        <Link to="/edit" className={styles.headerMember}>
+            <button>Edit</button>
         </Link>
     </div>
   );
