@@ -27,6 +27,7 @@ const Home = () => {
     const numPlayers = "";
     const Winner = "";
     const Ranked = "";
+    const Tier = "";
     
 
     $.ajax({
@@ -41,20 +42,21 @@ const Home = () => {
         Location:Location,
         Region:Region,
         numPlayers:numPlayers,
-        Winner:Winner, Ranked:Ranked
+        Winner:Winner, Ranked:Ranked,
+        Tier:Tier
       },
       success: function(data) {
         $("div.responseBox").html(data);
-        setResponseData(data);
+        // setResponseData(data);
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Error:", jqXHR, textStatus, errorThrown);
         // Handle errors appropriately
       }
     });
-    setTimeout(() => {
-      forceUpdate();
-    }, 200);
+    // setTimeout(() => {
+    //   forceUpdate();
+    // }, 200);
   };
 
   handleClick();
